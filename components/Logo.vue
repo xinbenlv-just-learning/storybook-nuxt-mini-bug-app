@@ -1,5 +1,6 @@
 <template>
-  <svg class="NuxtLogo" width="245" height="180" viewBox="0 0 452 342" xmlns="http://www.w3.org/2000/svg">
+<section>
+    <svg class="NuxtLogo" width="245" height="180" viewBox="0 0 452 342" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M139 330l-1-2c-2-4-2-8-1-13H29L189 31l67 121 22-16-67-121c-1-2-9-14-22-14-6 0-15 2-22 15L5 303c-1 3-8 16-2 27 4 6 10 12 24 12h136c-14 0-21-6-24-12z"
       fill="#00C58E"
@@ -13,6 +14,24 @@
       fill="#2F495E"
     />
   </svg>
+        <h2>
+      Hello world internationalized: {{$t('greeting')}}
+      </h2>
+      <nuxt-link
+        v-if="$i18n.locale !== 'en'"
+        :to="switchLocalePath('en')"
+      >
+        English
+      </nuxt-link>
+
+      <nuxt-link
+        v-if="$i18n.locale !== 'es'"
+        :to="switchLocalePath('es')"
+      >
+      Español
+      </nuxt-link>
+</section>
+
 </template>
 
 <style>

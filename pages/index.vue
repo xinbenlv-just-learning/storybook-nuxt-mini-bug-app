@@ -5,22 +5,6 @@
       <h1 class="title">
         mini-bug-app
       </h1>
-      <h2>
-      Hello world internationalized: {{$t('greeting')}}
-      </h2>
-      <nuxt-link
-        v-if="$i18n.locale !== 'en'"
-        :to="switchLocalePath('en')"
-      >
-        English
-      </nuxt-link>
-
-      <nuxt-link
-        v-if="$i18n.locale !== 'es'"
-        :to="switchLocalePath('es')"
-      >
-      Español
-      </nuxt-link>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
