@@ -30,8 +30,24 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: [
-  ],
+  modules: [[
+    'nuxt-i18n',
+      {
+        locales: ['en', 'es'],
+        defaultLocale: 'en',
+        vueI18n: {
+          fallbackLocale: 'en',
+          messages: {
+            en: {
+              greeting: 'Hello world!'
+            },
+            es: {
+              greeting: '¡Hola mundo!'
+            }
+          }
+        }
+      }
+  ]],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
